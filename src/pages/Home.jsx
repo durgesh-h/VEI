@@ -20,7 +20,6 @@ function Home() {
         <HeroSection />
         <CaraouselPage/>
         <ServicesSection />
-        <ProjectsGallery />
         <ContactCTA />
       </main>
       

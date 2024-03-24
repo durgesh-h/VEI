@@ -4,7 +4,7 @@ function ProjectsGallery() {
   return (
     <div className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-center text-3xl font-bold mb-8">Our Projects</h2>
+       
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Example Project Card */}
           <div className="overflow-hidden shadow-lg rounded-lg">

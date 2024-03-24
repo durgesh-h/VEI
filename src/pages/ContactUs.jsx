@@ -5,7 +5,7 @@ const ContactUs = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
       <p className="text-lg mb-6">
-        Feel free to reach out to us for any inquiries or questions.
+      Have a question or need assistance? Contact us using the form below or reach out to us directly.
       </p>
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/2 relative">
