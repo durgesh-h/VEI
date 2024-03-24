@@ -66,9 +66,9 @@ const ParticlesComponent = (props) => {
         },
         links: {
           color: "#ffffffaa",
-          distance: 120,
+          distance: 200,
           enable: true,
-          opacity: 0.3,
+          opacity: 0.2,
           width: 1,
         },
         move: {
@@ -85,7 +85,7 @@ const ParticlesComponent = (props) => {
           density: {
             enable: true,
           },
-          value: 60,
+          value: 120,
         },
         opacity: {
           value: 1.0,

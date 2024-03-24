@@ -3,7 +3,8 @@ import Carousel from "react-bootstrap/Carousel";
 import bulbg from '../assets/bulbg.jpg';
 import blb from '../assets/blb.jpg';
 import ParticlesComponent from "./particles";
-
+import house from '../assets/house.jpg'
+import trans from '../assets/trans.jpg'
 function CaraouselPage() {
   return (
     <div>
@@ -26,7 +27,7 @@ function CaraouselPage() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={bulbg}
+            src={house}
             alt="second slide"
           ></img>
           <Carousel.Caption>
@@ -37,7 +38,7 @@ function CaraouselPage() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={bulbg}
+            src={trans}
             alt="third slide"
           ></img>
           <Carousel.Caption>

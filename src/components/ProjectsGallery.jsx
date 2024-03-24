@@ -1,3 +1,5 @@
+import logo from '../assets/logo.jpg'
+
 function ProjectsGallery() {
   return (
     <div className="bg-white py-12">
@@ -7,7 +9,7 @@ function ProjectsGallery() {
           {/* Example Project Card */}
           <div className="overflow-hidden shadow-lg rounded-lg">
             <img
-              src="/src/assets/blb.jpg"
+              src={logo}
               alt="Project Name"
               className="w-full"
             />
@@ -19,7 +21,7 @@ function ProjectsGallery() {
           {/* Repeat for other projects */}
           <div className="overflow-hidden shadow-lg rounded-lg">
             <img
-              src="/src/assets/blb.jpg"
+              src={logo}
               alt="Project Name"
               className="w-full"
             />
@@ -30,7 +32,7 @@ function ProjectsGallery() {
           </div>
           <div className="overflow-hidden shadow-lg rounded-lg">
             <img
-              src="/src/assets/blb.jpg"
+              src={logo}
               alt="Project Name"
               className="w-full"
             />
