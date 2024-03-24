@@ -1,0 +1,102 @@
+/* Base Styles */
+.header {
+    background: #1a202c; /* Dark background for a premium feel */
+    color: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #f7fafc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.logo-img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+/* Enhanced Desktop Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #f7fafc;
+    margin: 0 15px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #4fd1c5; /* Light blue accent */
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Mobile Navigation Style */
+.mobile-nav {
+    /* Same as before, add a more premium background */
+    background: rgba(26, 32, 44, 0.98);
+    /* Rest of the styles remain */
+}
+
+/* Hamburger Icon */
+.hamburger .line {
+    background: #f7fafc;
+    /* Transition for transform added */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    /* Responsive Adjustments */
+    .hamburger {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
