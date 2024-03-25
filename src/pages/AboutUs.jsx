@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 import logo from "../assets/logo.jpg";
+import UP from '../assets/UP.png'
+import msme from '../assets/msme.png'
+import director from '../assets/director.png'
+import electric1 from '../assets/electric1.webp'
+import electric2 from '../assets/electric2.jpeg'
+import license from '../assets/license.png'
+import msme1 from '../assets/msme1.jpg'
+import msme2 from '../assets/msme2.jpg'
+import msme3 from '../assets/msme3.jpg'
 // Certificates Component
 const Certificates = ({ Certificates, onCertificateClick }) => {
   return (
@@ -55,9 +64,9 @@ const Certificates = ({ Certificates, onCertificateClick }) => {
       <div className="mb-8 flex flex-wrap justify-center items-center">
         <div className="w-full md:w-1/2 p-4">
           <img
-            src={logo}
+            src={electric2}
             alt="Business Image 1"
-            className="w-full h-auto rounded-lg shadow-lg mb-4"
+            className="w-full lg:h-80 sm:h-auto rounded-lg shadow-lg mb-4"
           />
           {/* <video controls className="w-full h-auto rounded-lg shadow-lg">
             <source src="/business_video1.mp4" type="video/mp4" />
@@ -66,9 +75,9 @@ const Certificates = ({ Certificates, onCertificateClick }) => {
         </div>
         <div className="w-full md:w-1/2 p-4">
           <img
-            src={logo}
+            src={electric1}
             alt="Business Image 2"
-            className="w-full h-auto rounded-lg shadow-lg mb-4"
+            className="w-full lg:h-80 sm:h-auto rounded-lg shadow-lg mb-4"
           />
           {/* <video controls className="w-full h-auto rounded-lg shadow-lg">
             <source src="/business_video2.mp4" type="video/mp4" />
@@ -103,7 +112,7 @@ const Certificates = ({ Certificates, onCertificateClick }) => {
         <h2 className="text-3xl font-bold mb-4">Proprietor</h2>
         <div className="flex items-center mb-4">
           <img
-            src={logo}
+            src={director}
             alt="Manish Kumar Pathak"
             className="w-20 h-20 rounded-full mr-4"
           />
@@ -127,7 +136,7 @@ const Certificates = ({ Certificates, onCertificateClick }) => {
       <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 gap-28 mx-4 my-32 lg:px-14">
         {Certificates.map(Certificate => (
           <div key={Certificate.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src={Certificate.image} alt={Certificate.title} className="w-full h-64 object-cover" />
+            <img src={Certificate.image} alt={Certificate.title} className="w-full h-28 object-contain" />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{Certificate.title}</h3>
               <p className="text-lg mb-4">Type of Work: {Certificate.type}</p>
@@ -160,8 +169,8 @@ const CertificateDetail = ({ Certificate, onBack }) => {
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-xl font-bold mb-2">License/Reg. No:</h2>
           <p className="text-lg mb-4">{Certificate.Lno}</p>
-          <h2 className="text-xl font-bold mb-2">GSTIN:</h2>
-          <p className="text-lg mb-4">{Certificate.GSTIN}</p>
+          {/* <h2 className="text-xl font-bold mb-2">GSTIN:</h2>
+          <p className="text-lg mb-4">{Certificate.GSTIN}</p> */}
           <h2 className="text-xl font-bold mb-2">Issued by:</h2>
           <p className="text-lg mb-4">{Certificate.type}</p>
           <h2 className="text-xl font-bold mb-2">Description:</h2>
@@ -193,29 +202,27 @@ const CertificatesData = [
   {
     id: 1,
     title: "MSME Certificate",
-    Lno: "",
+    Lno: "09CONPP4938K1Z2",
     GSTIN:"",
     type: "Govt of India",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
-    image: "https://via.placeholder.com/500",
+    image:msme ,
     images: [
-      "https://via.placeholder.com/500",
-      "https://via.placeholder.com/500",
-      "https://via.placeholder.com/500",
+      msme1,
+      msme2,
+      msme3,
     ]
   },
   {
     id: 1,
     title: "License",
-    Lno: "New York, USA",
+    Lno: "JR-215",
     GSTIN:"",
     type: "UP Govt",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
-    image: "https://via.placeholder.com/500",
+    image: UP,
     images: [
-      "https://via.placeholder.com/500",
-      "https://via.placeholder.com/500",
-      "https://via.placeholder.com/500",
+      license
     ]
   },
 
