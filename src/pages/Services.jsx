@@ -1,82 +1,93 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ServicesPage = () => {
+  const [services] = useState([
+    {
+      id: 1,
+      title: "Service 1",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
+      points: [
+        "Point 1",
+        "Point 2",
+        "Point 3",
+      ],
+      image: "https://via.placeholder.com/500",
+      images: [
+        "https://via.placeholder.com/500",
+        "https://via.placeholder.com/500",
+        "https://via.placeholder.com/500",
+      ]
+    },
+    {
+      id: 2,
+      title: "Service 2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
+      points: [
+        "Point 1",
+        "Point 2",
+        "Point 3",
+      ],
+      image: "https://via.placeholder.com/500",
+      images: [
+        "https://via.placeholder.com/500",
+        "https://via.placeholder.com/500",
+        "https://via.placeholder.com/500",
+      ]
+    },
+  ]);
+
+  const [selectedService, setSelectedService] = useState(null);
+
+  const handleServiceClick = (service) => {
+    setSelectedService(service);
+  };
+
+  const handleBackToServices = () => {
+    setSelectedService(null);
+  };
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Our Services</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Service 1: Electrical Installation */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-xl font-bold mb-2">Electrical Installation</h2>
-          <img
-            src="https://via.placeholder.com/300" // Replace with the actual image URL
-            alt="Electrical Installation"
-            className="mb-4 rounded-lg"
-          />
-          <p className="text-lg mb-4">
-            Our experienced electricians provide professional electrical
-            installation services for residential, commercial, and industrial
-            properties. From wiring and lighting to panel upgrades and
-            electrical fixtures, we ensure safe and efficient installations
-            tailored to your needs.
-          </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Wiring and Rewiring</li>
-            <li>Lighting Installation</li>
-            <li>Panel Upgrades</li>
-            <li>Electrical Fixtures</li>
-            <li>and more...</li>
-          </ul>
+    <div className="bg-gray-100 min-h-screen py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map(service => (
+            <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="p-6">
+                <img src={service.image} alt={service.title} className="w-full h-64 object-cover mb-4 rounded-lg" />
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <button onClick={() => handleServiceClick(service)} className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Learn More</button>
+              </div>
+            </div>
+          ))}
         </div>
-
-        {/* Service 2: Infrastructure Development */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-xl font-bold mb-2">Infrastructure Development</h2>
-          <img
-            src="https://via.placeholder.com/300" // Replace with the actual image URL
-            alt="Infrastructure Development"
-            className="mb-4 rounded-lg"
-          />
-          <p className="text-lg mb-4">
-            We specialize in infrastructure development projects, including
-            roadways, bridges, and utilities. Our team of experts delivers
-            comprehensive solutions from planning and design to construction
-            management and maintenance.
-          </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Road Construction</li>
-            <li>Bridge Engineering</li>
-            <li>Utility Installation</li>
-            <li>Site Development</li>
-            <li>and more...</li>
-          </ul>
-        </div>
-
-        {/* Service 3: Maintenance Services */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-xl font-bold mb-2">Maintenance Services</h2>
-          <img
-            src="https://via.placeholder.com/300" // Replace with the actual image URL
-            alt="Maintenance Services"
-            className="mb-4 rounded-lg"
-          />
-          <p className="text-lg mb-4">
-            Our maintenance services ensure the smooth operation and longevity
-            of your electrical and infrastructure systems. We offer scheduled
-            maintenance plans, troubleshooting, repairs, and emergency services
-            to keep your facilities running efficiently.
-          </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Regular Inspections</li>
-            <li>Troubleshooting</li>
-            <li>Emergency Repairs</li>
-            <li>Preventive Maintenance</li>
-            <li>and more...</li>
-          </ul>
-        </div>
-
-        {/* Add more services here */}
       </div>
+      {selectedService && (
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center overflow-auto">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-md md:max-w-4xl mt-4 md:mt-0">
+            <button onClick={handleBackToServices} className="absolute top-0 right-0 m-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Back</button>
+            <div className="p-6">
+              <h2 className="text-2xl font-bold mb-4">{selectedService.title}</h2>
+              <p className="text-lg mb-4">{selectedService.description}</p>
+              <ul className="list-disc list-inside mb-4">
+                {selectedService.points.map((point, index) => (
+                  <li key={index} className="text-lg">{point}</li>
+                ))}
+              </ul>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {selectedService.images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Service Image ${index + 1}`}
+                    className="rounded-lg shadow-lg"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

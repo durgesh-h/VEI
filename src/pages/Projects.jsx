@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-
+import logo from "../assets/logo.jpg";
 // Projects Component
 const Projects = ({ projects, onProjectClick }) => {
   return (
-    <div className="container mx-auto mb-16 mt-10">
+    <>
+
+    
+     <div className="container  mx-auto mb-16\ mt-10">
+      
       <h2 className="text-3xl font-bold mb-8">Our Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {/* kkl/lfd;glgndfsLL */}
+   
+      
+      {/* khjgfdsfL */}
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 gap-28 mx-4 my-32">
         {projects.map(project => (
           <div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
@@ -19,6 +28,9 @@ const Projects = ({ projects, onProjectClick }) => {
         ))}
       </div>
     </div>
+    
+    </>
+   
   );
 };
 
@@ -92,19 +104,7 @@ const projectsData = [
       "https://via.placeholder.com/500",
     ]
   },
-  {
-    id: 1,
-    title: "Residential Project",
-    location: "New York, USA",
-    type: "Electrical Installation",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
-    image: "https://via.placeholder.com/500",
-    images: [
-      "https://via.placeholder.com/500",
-      "https://via.placeholder.com/500",
-      "https://via.placeholder.com/500",
-    ]
-  }
+
   // Add more project objects as needed
 ];
 
