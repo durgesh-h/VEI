@@ -139,7 +139,7 @@ const Certificates = ({ Certificates, onCertificateClick }) => {
             <img src={Certificate.image} alt={Certificate.title} className="w-full h-28 object-contain" />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{Certificate.title}</h3>
-              <p className="text-lg mb-4">Type of Work: {Certificate.type}</p>
+              <p className="text-lg mb-4"><b>Issued by:</b> {Certificate.type}</p>
             <p className="text-lg mb-4">{Certificate.description}</p>
               <button onClick={() => onCertificateClick(Certificate)} className="bg-blue-500 text-white px-4 py-2 rounded-lg">Learn More</button>
             </div>
@@ -205,7 +205,7 @@ const CertificatesData = [
     Lno: "09CONPP4938K1Z2",
     GSTIN:"",
     type: "Govt of India",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
+    description: "An MSME certificate is issued by the Ministry of Micro, Small and Medium Enterprises. It provides legal recognition to businesses that are classified as micro, small, or medium enterprises (MSMEs). The certificate helps businesses to access various government incentives and schemes.",
     image:msme ,
     images: [
       msme1,
@@ -219,7 +219,7 @@ const CertificatesData = [
     Lno: "JR-215",
     GSTIN:"",
     type: "UP Govt",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
+    description: "This licence can be issued to a sole-trader, a firm (partnership) or a body corporate (a company or other incorporated entity). Electrical Contractor will require the licence if you intend to carry on a business as an electrician and undertake electrical work.",
     image: UP,
     images: [
       license
