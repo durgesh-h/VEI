@@ -1,25 +1,60 @@
-function Footer() {
-    return (
-      <footer className="text-white body-font bg-blue-500">
-        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
-            <span className="ml-3 text-xl">Vaibhav Electricals & Infra</span>
-          </a>
-          <p className="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Vaibhav Electricals & Infra —
-            <a href="https://twitter.com/knyttneve" className="text-white ml-1" rel="noopener noreferrer" target="_blank">@vaibhavelectricals</a>
-          </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a className="text-white">
-              <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                {/* SVG icons for social media */}
-              </svg>
-            </a>
-            {/* More social icons */}
-          </span>
+// Footer.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+  return (
+    <footer className="bg-black text-gray-400 p-10 text-sm">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Company Info */}
+        <div className="space-y-4">
+          <h2 className="text-white text-2xl font-bold">Vaibhav Electricals & Infrastructure</h2>
+          <p>Leading the way in electrical innovation and infrastructure since 1998.</p>
+          <div className="flex space-x-4">
+            {/* Example Social Links */}
+            <a href="mailto:vaibhavelectricalsinfra@gmail.com" className="hover:text-white">vaibhavelectricalsinfra@gmail.com</a>
+            
+          </div>
         </div>
-      </footer>
-    );
-  }
-  
-  export default Footer;
-  
+        
+        {/* Links */}
+        <div className="space-y-4">
+          <h3 className="text-white font-semibold">Quick Links</h3>
+          <ul className="space-y-2">
+            <li><Link to="/" className="hover:text-white">Home</Link></li>
+            <li><Link to="/AboutUs" className="hover:text-white">About Us</Link></li>
+            <li><Link to="/Services" className="hover:text-white">Services</Link></li>
+            <li><Link to="/Projects" className="hover:text-white">Projects</Link></li>
+            <li><Link to="/ContactUs" className="hover:text-white">Contact</Link></li>
+          </ul>
+        </div>
+        
+        {/* Services */}
+        <div className="space-y-4">
+          <h3 className="text-white font-semibold">Our Services</h3>
+          <ul className="space-y-2">
+            <li><Link to="/Services" className="hover:text-white">Electrical Installations</Link></li>
+            <li><Link to="/Services" className="hover:text-white">Infrastructure Development</Link></li>
+            <li><Link to="/Services" className="hover:text-white">Maintenance & Support</Link></li>
+          </ul>
+        </div>
+        
+        {/* Newsletter */}
+        <div className="space-y-4">
+          <h3 className="text-white font-semibold">Stay Updated</h3>
+          <p>Sign up for our newsletter to get the latest news and updates.</p>
+          <form className="flex flex-col space-y-2">
+            <input type="email" placeholder="Your Email" className="p-2 rounded text-black" />
+            <button type="submit" className="bg-yellow-500 hover:bg-yellow-700 text-black p-2 rounded">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div className="border-t border-gray-700 text-center p-4 mt-8">
+         © {new Date().getFullYear()} Vaibhav Electricals & Infra. All rights reserved. <br></br>Developed by <a href="https://dgfolio.vercel.app" target='blank' className="hover:text-white">Durgesh Prasad</a>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

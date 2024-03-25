@@ -1,37 +1,60 @@
 import React, { useState } from 'react';
+import elc from '../assets/elc.jpg'
+import infra from '../assets/infra.jpg'
+import elc1 from '../assets/elc1.png'
+import infra1 from '../assets/infra1.png'
+import elc2 from '../assets/elc2.png'
+import infra2 from '../assets/infra2.png'
+import elc3 from '../assets/elc3.png'
+import infra3 from '../assets/infra3.png'
+import elc4 from '../assets/elc4.png'
+import infra4 from '../assets/infra4.png'
+import elc5 from '../assets/elc5.png'
+import infra5 from '../assets/infra5.png'
+import elc6 from '../assets/elc6.png'
+import infra6 from '../assets/infra6.jpg'
 
 const ServicesPage = () => {
   const [services] = useState([
     {
       id: 1,
-      title: "Service 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
+      title: "Electrical Installation",
+      description: "Electrical installation and maintenance is the process of installing and maintaining electrical systems and equipment. It may include tasks such as installing wiring, repairing or replacing damaged equipment, and inspecting electrical systems for safety.",
       points: [
-        "Point 1",
-        "Point 2",
-        "Point 3",
+        "Electrical System Design and Installation",
+        "Lighting Solutions",
+        "Power Cabling and Networking",
+        "Panel Upgrades",
       ],
-      image: "https://via.placeholder.com/500",
+      image: elc,
       images: [
-        "https://via.placeholder.com/500",
-        "https://via.placeholder.com/500",
-        "https://via.placeholder.com/500",
+        elc1,
+       elc2,
+        elc3,
+        elc4,
+        elc5,
+        elc6,
       ]
     },
     {
       id: 2,
-      title: "Service 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet mi eu elit vehicula, eu volutpat nisi ullamcorper.",
+      title: "Infrastructure Development",
+      description: "Electrical Infrastructure development in which electrical poles, towers and above or below-ground wires and cables, and all necessary foundations, line switches, transformers, panels, meters and other appliances, appurtenances and fixtures related to the foregoing.",
       points: [
-        "Point 1",
-        "Point 2",
-        "Point 3",
+        "Hydraulic Press Machine",
+        "Shearing Machine",
+        "Power Coating Plant",
+        "Assemby Area",
       ],
-      image: "https://via.placeholder.com/500",
+      image: infra,
       images: [
-        "https://via.placeholder.com/500",
-        "https://via.placeholder.com/500",
-        "https://via.placeholder.com/500",
+        infra1,
+        infra2,
+        infra3,
+        infra4,
+        infra5,
+        infra6
+        
       ]
     },
   ]);
@@ -54,7 +77,7 @@ const ServicesPage = () => {
           {services.map(service => (
             <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="p-6">
-                <img src={service.image} alt={service.title} className="w-full h-64 object-cover mb-4 rounded-lg" />
+                <img src={service.image} alt={service.title} className="w-full h-96 object-cover mb-4 rounded-lg" />
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <button onClick={() => handleServiceClick(service)} className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Learn More</button>
               </div>
@@ -73,7 +96,7 @@ const ServicesPage = () => {
                         key={index}
                         src={image}
                         alt={`Service Image ${index + 1}`}
-                        className="rounded-lg shadow-lg"
+                        className="rounded-lg shadow-lg h-40 w-full object-cover"
                       />
                     ))}
                   </div>
