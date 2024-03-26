@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {fontFamily:{
+      spacegrotesk:["Space Grotesk", "sans-serif"],
+    }},
   },
   plugins: [],
 }

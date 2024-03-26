@@ -18,11 +18,11 @@ const Header = () => {
   );
 
   return (
-    <nav className="bg-black text-white py-4">
+    <nav className="bg-black font-spacegrotesk text-white py-4">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="hover:text-gray-300" onClick={isOpen ? toggleNavbar : undefined}>
-            <img src={logo} alt="VEI Logo" className="h-8 mr-2 " />
+            <img src={logo} alt="VEI Logo" className="h-20 mr-2 " />
           </Link>
           <span className="text-lg font-semibold">
             <Link to="/" className="hover:text-yellow-300 " onClick={isOpen ? toggleNavbar : undefined}>

@@ -8,7 +8,7 @@ import ParticlesComponent from "./particles";
 
 function CaraouselPage() {
   return (
-    <div className="relative">
+    <div className="relative font-spacegrotesk">
       <ParticlesComponent id="particles" />
       <Carousel>
         {[bulbg, infraa, house, trans].map((image, index) => (

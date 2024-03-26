@@ -20,7 +20,7 @@ const Certificates = ({ Certificates, onCertificateClick }) => {
     
 
       {/* kkl/lfd;glgndfsLL */}
-      <div className="container mx-auto p-8">
+      <div className="container mx-auto font-spacegrotesk p-8">
       {/* Description section */}
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-4">

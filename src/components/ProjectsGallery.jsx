@@ -2,7 +2,7 @@ import logo from '../assets/logo.jpg'
 
 function ProjectsGallery() {
   return (
-    <div className="bg-white py-12">
+    <div className="bg-white font-spacegrotesk py-12">
       <div className="max-w-6xl mx-auto px-4">
        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

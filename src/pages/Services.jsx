@@ -70,7 +70,7 @@ const ServicesPage = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen py-12">
+    <div className="bg-gray-100 font-spacegrotesk min-h-screen py-12">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
         <div className="grid grid-1 md:grid-2 gap-8 lg:mx-40 ">
