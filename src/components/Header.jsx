@@ -22,33 +22,33 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="hover:text-gray-300" onClick={isOpen ? toggleNavbar : undefined}>
-            <img src={logo} alt="VEI Logo" className="h-8 mr-2" />
+            <img src={logo} alt="VEI Logo" className="h-8 mr-2 " />
           </Link>
           <span className="text-lg font-semibold">
-            <Link to="/" className="hover:text-gray-300" onClick={isOpen ? toggleNavbar : undefined}>
+            <Link to="/" className="hover:text-yellow-300 " onClick={isOpen ? toggleNavbar : undefined}>
               Vaibhav Electricals & Infra
             </Link>
           </span>
         </div>
         <div className="hidden md:flex space-x-4">
-          <Link to="/" className="hover:text-gray-300">
+          <Link to="/" className=" hover:text-yellow-600 transition duration-300">
             Home
           </Link>
-          <Link to="/AboutUs" className="hover:text-gray-300">
+          <Link to="/AboutUs" className=" hover:text-yellow-600 transition duration-300">
             About
           </Link>
-          <Link to="/Services" className="hover:text-gray-300">
+          <Link to="/Services" className=" hover:text-yellow-600 transition duration-300">
             Services
           </Link>
-          <Link to="/Projects" className="hover:text-gray-300">
+          <Link to="/Projects" className=" hover:text-yellow-600 transition duration-300">
             Projects
           </Link>
-          <Link to="/ContactUs" className="hover:text-gray-300">
+          <Link to="/ContactUs" className=" hover:text-yellow-600 transition duration-300">
             Contact
           </Link>
           <Link
             to="/"
-            className="inline-block bg-yellow-500 text-black px-2 py-0.5 rounded-lg hover:bg-yellow-600 transition duration-300"
+            className="inline-block bg-yellow-600 text-black px-3  border-2 py-0.2 rounded-lg hover:bg-white transition duration-300"
           >
             Sign in
           </Link>

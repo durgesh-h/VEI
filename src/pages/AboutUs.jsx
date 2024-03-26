@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from "../assets/logo.jpg";
 import UP from '../assets/UP.png'
 import msme from '../assets/msme.png'
@@ -9,6 +9,8 @@ import license from '../assets/license.png'
 import msme1 from '../assets/msme1.jpg'
 import msme2 from '../assets/msme2.jpg'
 import msme3 from '../assets/msme3.jpg'
+
+
 // Certificates Component
 const Certificates = ({ Certificates, onCertificateClick }) => {
   return (
@@ -155,6 +157,10 @@ const Certificates = ({ Certificates, onCertificateClick }) => {
 
 // CertificateDetail Component
 const CertificateDetail = ({ Certificate, onBack }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // The empty array ensures this effect runs only once after the initial render
+
   if (!Certificate) {
     return <div>Loading...</div>;
   }
