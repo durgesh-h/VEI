@@ -21,11 +21,11 @@ const Footer = () => {
         <div className="space-y-4">
           <h3 className="text-white font-semibold">Quick Links</h3>
           <ul className="space-y-2">
-            <li><Link to="/" className="hover:text-white">Home</Link></li>
-            <li><Link to="/AboutUs" className="hover:text-white">About Us</Link></li>
-            <li><Link to="/Services" className="hover:text-white">Services</Link></li>
-            <li><Link to="/Projects" className="hover:text-white">Projects</Link></li>
-            <li><Link to="/ContactUs" className="hover:text-white">Contact</Link></li>
+            <li><a href="/" className="hover:text-white">Home</a></li>
+            <li><a href="/AboutUs" className="hover:text-white">About Us</a></li>
+            <li><a href="/Services" className="hover:text-white">Services</a></li>
+            <li><a href="/Projects" className="hover:text-white">Projects</a></li>
+            <li><a href="/ContactUs" className="hover:text-white">Contact</a></li>
           </ul>
         </div>
         
@@ -33,9 +33,9 @@ const Footer = () => {
         <div className="space-y-4">
           <h3 className="text-white font-semibold">Our Services</h3>
           <ul className="space-y-2">
-            <li><Link to="/Services" className="hover:text-white">Electrical Installations</Link></li>
-            <li><Link to="/Services" className="hover:text-white">Infrastructure Development</Link></li>
-            <li><Link to="/Services" className="hover:text-white">Maintenance & Support</Link></li>
+            <li><a href="/Services" className="hover:text-white">Electrical Installations</a></li>
+            <li><a href="/Services" className="hover:text-white">Infrastructure Development</a></li>
+            <li><a href="/Services" className="hover:text-white">Maintenance & Support</a></li>
           </ul>
         </div>
         

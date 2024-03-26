@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8" id="contact">
       <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
       <p className="text-lg mb-6">
         Have a question or need assistance? Contact us using the form below or
@@ -28,11 +28,11 @@ const ContactUs = () => {
             <h2 className="text-xl font-bold mb-4">Contact Details</h2>
             <div className="mb-4">
               <h3 className="font-semibold">Phone</h3>
-              <p>+1 123 456 7890</p>
+             <a href="tel:+91 7007208556" className="hover:text-gray-700">+91 7007208556</a>
             </div>
             <div className="mb-4">
               <h3 className="font-semibold">Email</h3>
-              <p>vaibhavelectricalsinfra@gmail.com</p>
+              <a href="mailto:vaibhavelectricalsinfra@gmail.com" className="hover:text-gray-700">vaibhavelectricalsinfra@gmail.com</a>
             </div>
             <div className="mb-6">
               <h3 className="font-semibold">Location</h3>

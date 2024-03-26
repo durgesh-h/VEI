@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
 
 const ServicesSection = () => {
   return (
@@ -43,12 +42,12 @@ const ServicesSection = () => {
           </div> */}
         </div>
         <div className="text-center mt-8">
-          <Link
-            to="/Services"
+          <a
+            href="/Services"
             className="inline-block bg-yellow-500 text-black px-8 py-2.5 rounded-lg hover:bg-yellow-600 transition duration-300"
           >
             Learn More
-          </Link>
+          </a>
         </div>
         
       </div>
