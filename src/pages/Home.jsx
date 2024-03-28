@@ -15,13 +15,13 @@ import CaraouselPage from '../components/CaraouselPage';
 function Home() {
   return (
     <div>
-    
-      <main>
-        <HeroSection />
-        <CaraouselPage/>
-        <ServicesSection />
-        <ContactCTA />
-      </main>
+    <h1>ERROR 404 | Go For Premium Hosting </h1>
+//      <main>
+   //     <HeroSection />
+   //     <CaraouselPage/>
+    //    <ServicesSection />
+    //    <ContactCTA />
+    //  </main>
       
     </div>
   );
