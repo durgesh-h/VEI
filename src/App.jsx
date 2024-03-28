@@ -13,7 +13,7 @@ import ContactUs from "./pages/ContactUs";
 function App() {
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
     
     <Header/>
     <Routes>
@@ -24,8 +24,8 @@ function App() {
       <Route path='/ContactUs' element={<ContactUs/>}> </Route>
     </Routes>
     <Footer/>
-    </BrowserRouter>
-     
+    </BrowserRouter> */}
+      <h1>ERROR 404 | Go For Premium Hosting </h1>
     </>
   );
 }
