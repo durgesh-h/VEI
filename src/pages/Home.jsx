@@ -16,12 +16,12 @@ function Home() {
   return (
     <div>
     <h1>ERROR 404 | Go For Premium Hosting </h1>
-//      <main>
-   //     <HeroSection />
-   //     <CaraouselPage/>
-    //    <ServicesSection />
-    //    <ContactCTA />
-    //  </main>
+     {/* <main>
+       <HeroSection />
+       <CaraouselPage/>
+        <ServicesSection />
+        <ContactCTA />
+     </main> */}
       
     </div>
   );
