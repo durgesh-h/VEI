@@ -51,7 +51,7 @@ const Footer = () => {
       </div>
       
       <div className="border-t border-gray-700 text-center p-4 mt-8">
-         © {new Date().getFullYear()} Vaibhav Electricals & Infra. All rights reserved. <br></br>Developed by <a href="https://dgfolio.vercel.app" target='blank' className="hover:text-white">Durgesh Prasad</a>
+         © {new Date().getFullYear()} Vaibhav Electricals & Infra. All rights reserved. <br></br>Developed by <a href="#" target='blank' className="hover:text-white">Sonal Kumari & Durgesh Prasad</a>
       </div>
     </footer>
   );
